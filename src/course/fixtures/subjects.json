@@ -1,0 +1,46 @@
+[
+{
+  "model": "course.subject",
+  "pk": 1,
+  "fields": {
+    "title": "Math",
+    "slug": "math",
+    "description": "test Desc",
+    "created": "2024-03-12T20:13:34.414Z",
+    "updated": "2024-03-12T20:13:34.414Z"
+  }
+},
+{
+  "model": "course.subject",
+  "pk": 2,
+  "fields": {
+    "title": "Music",
+    "slug": "music",
+    "description": "Desc from Music",
+    "created": "2024-03-12T20:13:49.191Z",
+    "updated": "2024-03-12T20:13:49.191Z"
+  }
+},
+{
+  "model": "course.subject",
+  "pk": 3,
+  "fields": {
+    "title": "Sport",
+    "slug": "sport",
+    "description": "Description from Soprt",
+    "created": "2024-03-12T20:14:03.402Z",
+    "updated": "2024-03-12T20:14:03.402Z"
+  }
+},
+{
+  "model": "course.subject",
+  "pk": 4,
+  "fields": {
+    "title": "Programming",
+    "slug": "programming",
+    "description": "Description from Programing",
+    "created": "2024-03-12T20:14:29.744Z",
+    "updated": "2024-03-12T20:14:29.744Z"
+  }
+}
+]

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "notes",
+  "steps": [
+    {
+      "file": "src/course/models.py",
+      "description": "polymorphic:\n    Polymorphism is the provision of a single interface to entities of different types. You need a versatile\n    data model that allows you to store diverse content that is accessible through a single interface\n\n\n    Remember that you need three different fields to setup a generic relation. In your Content model, these are:\n        •content_type: A ForeignKey field to the ContentType model.\n        •object_id: A PositiveIntegerField to store the primary key of the related object.\n        •item: A GenericForeignKey field to the related object combining the two previous fields.\n\n    Only the content_type and object_id fields have a corresponding column in the database table of\n    this model. The item field allows you to retrieve or set the related object directly, and its functionality is built on top of the other two fields.\n\n    You are going to use a different model for each type of content. Your Content models will have some\n    common fields, but they will differ in the actual data they can store. This is how you will create a single\n    interface for different types of content.\n",
+      "line": 61
+    },
+    {
+      "file": "src/course/models.py",
+      "description": "Since you are using '%(class)s_related' as the related_name, the reverse relationship for child models will be text_related, file_related, image_related, and video_related, respectively.",
+      "line": 75
+    },
+    {
+      "file": "src/course/models.py",
+      "description": "You add a limit_choices_to argument to limit the ContentType objects that can be used for the ge-\nneric relation. You use the model__in field lookup to filter the query to the ContentType objects with\na model attribute that is 'text', 'video', 'image', or 'file'.",
+      "line": 68
+    }
+  ]
+}
