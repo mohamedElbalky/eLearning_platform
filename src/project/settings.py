@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'course.apps.CourseConfig',
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,8 +43,11 @@ INSTALLED_APPS = [
     # third party apps
     
     # local apps
-    'course.apps.CourseConfig',
 ]
+
+LOGOUT_REDIRECT_URL = 'logout-confirmation'
+LOGIN_REDIRECT_URL = 'login'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

@@ -162,3 +162,5 @@ cython_debug/
 
 NOTES.md
 .tours/
+.vscode/
+notes.tours

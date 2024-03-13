@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>{% block title %}Educa{% endblock %}</title>
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+
+    <style>
+        .link {
+            background-color: transparent; 
+            border: none; 
+            color: blue; 
+            cursor: pointer; 
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <a href="/" class="logo">E-Learning</a>
+        <ul class="menu">
+
+            {% if request.user.is_authenticated %}
+                <form method="post" action="{% url 'logout' %}">
+                    {% csrf_token %}
+                    <button style="color: white; font-size: 17px" class='link' type="submit" type="submit">Sign Out</button>
+                </form>
+            {% else %}
+                <li><a href="{% url 'login' %}">Sign in</a></li>
+            {% endif %}
+
+        </ul>
+    </div>
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // DOM loaded
+            {% block domready %}
+            {% endblock %}
+        })
+    </script>
+</body>
+
+</html>
