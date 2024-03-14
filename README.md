@@ -4,7 +4,7 @@ Create an eLearning platform including
 - Create and use data fixtures
 - Use model inheritance to create data models for polymorphic content
 - Create custom model fields
-- Order course contents and modules
+- Order course contents and modules *********
 - Build authentication views for the CMS
 - Create a content management system using class-based views and mixins
 - Build formsets and model formsets to edit course modules and module contents

@@ -3,9 +3,19 @@
   "title": "notes",
   "steps": [
     {
+      "file": "src/course/views.py",
+      "description": "There are two main situations to use mixins:\n    •You want to provide multiple optional features for a class\n    •You want to use a particular feature in several classes",
+      "line": 24
+    },
+    {
       "file": "src/course/models.py",
       "description": "polymorphic:\n    Polymorphism is the provision of a single interface to entities of different types. You need a versatile\n    data model that allows you to store diverse content that is accessible through a single interface\n\n\n    Remember that you need three different fields to setup a generic relation. In your Content model, these are:\n        •content_type: A ForeignKey field to the ContentType model.\n        •object_id: A PositiveIntegerField to store the primary key of the related object.\n        •item: A GenericForeignKey field to the related object combining the two previous fields.\n\n    Only the content_type and object_id fields have a corresponding column in the database table of\n    this model. The item field allows you to retrieve or set the related object directly, and its functionality is built on top of the other two fields.\n\n    You are going to use a different model for each type of content. Your Content models will have some\n    common fields, but they will differ in the actual data they can store. This is how you will create a single\n    interface for different types of content.\n",
       "line": 61
+    },
+    {
+      "file": "src/course/views.py",
+      "description": "You override the\nget_queryset() method of the view to retrieve only courses created by the current user. To prevent\nusers from editing, updating, or deleting courses they didn’t create, you will also need to override the\nget_queryset() method in the create, update, and delete views.",
+      "line": 20
     },
     {
       "file": "src/course/templates/base.html",
